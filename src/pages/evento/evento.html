@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Evento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <img class="img-evento" src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg"/>
+    <ion-item class="header-evento"><h1 class="evento-title">{{evento.nome}}</h1></ion-item>
+    <ion-list>
+      <ion-row class="row-evento"><ion-icon class="espace-icon-evento" name="md-calendar"></ion-icon><div>{{evento.data}}</div></ion-row>    
+      <ion-row class="row-evento"><ion-icon class="espace-icon-evento" name="md-time"></ion-icon><div>{{evento.horario}}</div></ion-row>
+      <ion-row class="row-evento"><ion-icon class="espace-icon" name="ios-locate-outline"></ion-icon><div>{{evento.local}}</div></ion-row>
+      <ion-row class="row-evento"><ion-icon class="espace-icon" name="ios-pricetag-outline"></ion-icon><div>{{evento.tipo}}</div></ion-row>    
+      <p class="row-evento"><ion-icon class="espace-icon" name="ios-information-circle-outline"></ion-icon>{{evento.descricao}}</p>    
+    </ion-list>
+      <button ion-button block class="btn-presenca">Confirmar presença</button>
+    
+    </ion-content>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meus Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div padding>
+        <ion-segment [(ngModel)]="meuseventos">
+          <ion-segment-button value="criados">
+            Criados
+          </ion-segment-button>
+          <ion-segment-button value="inscritos">
+            Inscritos
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+  <div [ngSwitch]="meuseventos">
+      <ion-list *ngSwitchCase="'criados'">
+          <ion-item>
+              <ion-thumbnail item-start>
+                  <img src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg">
+                </ion-thumbnail>
+            <h2>Hackathon</h2>
+            <p>24/10/2017</p>
+          </ion-item>
+
+          <ion-item>
+              <ion-thumbnail item-start>
+                  <img src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg">
+                </ion-thumbnail>
+              <h2>Computerenf</h2>
+              <p>24/10/2017</p>
+          </ion-item>
+
+          <ion-item>
+            <button ion-button block class="btn-cadastro">Criar Evento</button>  
+          </ion-item>
+
+        </ion-list>
+
+
+        <ion-list *ngSwitchCase="'inscritos'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg">
+                  </ion-thumbnail>
+              <h2>JUNFRI</h2>
+              <p>24/10/2017</p>
+            </ion-item>
+  
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg">
+                  </ion-thumbnail>
+                <h2>INTER-UFF</h2>
+                <p>24/10/2017</p>
+            </ion-item>
+  
+            <ion-item>
+              <button ion-button block class="btn-cadastro">Eventos</button>  
+            </ion-item>
+  
+          </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-searchbar></ion-searchbar>
+    </ion-row>
+    <ion-row>
+        <button ion-button class="btn-filtro">
+          Filtros <ion-icon name="md-funnel" class="icon-filtro"></ion-icon>
+        </button>
+    </ion-row>
+  </ion-grid>
+
+  <button ion-item *ngFor = "let evento of eventos" (click)="navigate(evento)" >
+    <ion-card>
+  
+      <img class="img-card" src="http://www.saudevitalidade.com/wp-content/uploads/2016/07/bg-eventos.jpg"/>
+      <ion-card-content>
+    
+          
+          <ion-card-title> {{evento.nome}} </ion-card-title>
+          <ion-row><ion-icon class="espace-icon" name="ios-locate-outline"></ion-icon><div>{{evento.local}}</div></ion-row>
+          <ion-row><ion-icon class="espace-icon" name="md-calendar"></ion-icon><div>{{evento.data}}</div></ion-row>    
+          <ion-row><ion-icon class="espace-icon" name="ios-pricetag-outline"></ion-icon><div>{{evento.tipo}}</div></ion-row>    
+          <ion-row class="azul1"><ion-icon class="espace-icon" name="ios-people"></ion-icon><div>488 pessoas confirmadas</div></ion-row>
+      
+      </ion-card-content>
+    </ion-card>
+  </button>
+</ion-content>

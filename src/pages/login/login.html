@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+    <ion-list class="form-login"> 
+        
+      <form (ngSubmit)="doLogin()">    
+        <ion-item>
+          <ion-label><ion-icon class="icon-espace" name="ios-contact"></ion-icon>Email:</ion-label>
+          <ion-input type="text" [(ngModel)]="loginData.email" name="email"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label><ion-icon class="icon-espace" name="md-key"></ion-icon>Senha:</ion-label>
+            <ion-input type="password" [(ngModel)]="loginData.password" name="password"></ion-input>
+        </ion-item>
+        <button ion-button type="submit" blockk class="btn-login">Login</button>
+      </form>
+      <button ion-button block class="btn-cadastro">Cadastro</button> 
+               
+    </ion-list>
+    
+  </ion-content>
+  
